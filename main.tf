@@ -17,15 +17,15 @@ resource "grafana_api_key" "management" {
 resource "grafana_cloud_api_key" "metrics" {
   provider = grafana.cloud
 
-  cloud_stack_slug = grafana_cloud_stack.oteldemo.slug
-  name             = "metrics-publisher"
-  role             = "MetricsPublisher"
+  cloud_org_slug = grafana_cloud_stack.oteldemo.org_slug
+  name           = "metrics-publisher"
+  role           = "MetricsPublisher"
 }
 
 resource "grafana_cloud_api_key" "plugins" {
   provider = grafana.cloud
 
-  cloud_stack_slug = grafana_cloud_stack.oteldemo.slug
-  name             = "plugin-publisher"
-  role             = "PluginPublisher"
+  cloud_org_slug = grafana_cloud_stack.oteldemo.org_slug
+  name           = "plugin-publisher"
+  role           = "PluginPublisher"
 }
