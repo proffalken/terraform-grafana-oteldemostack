@@ -5,7 +5,7 @@ variable "grafana_cloud_api_key" {
 }
 
 variable "grafana_stack_name" {
-  default = "otel-demo-stack"
+  default = "oteldemostack"
   type    = string
 }
 
