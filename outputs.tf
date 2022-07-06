@@ -18,10 +18,6 @@ output "loki_user_id" {
   value = grafana_cloud_stack.oteldemo.logs_user_id
 }
 
-output "prometheus_remote_endpoint" {
-  value = grafana_cloud_stack.oteldemo.prometheus_remote_endpoint
-}
-
 output "management_api_key" {
   value     = grafana_api_key.management.key
   sensitive = true
