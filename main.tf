@@ -14,7 +14,7 @@ resource "grafana_api_key" "management" {
   role             = "Admin"
 }
 
-resource "grafana_api_key" "metrics" {
+resource "grafana_cloud_api_key" "metrics" {
   provider = grafana.cloud
 
   cloud_stack_slug = grafana_cloud_stack.oteldemo.slug
@@ -22,7 +22,7 @@ resource "grafana_api_key" "metrics" {
   role             = "MetricsPublisher"
 }
 
-resource "grafana_api_key" "plugins" {
+resource "grafana_cloud_api_key" "plugins" {
   provider = grafana.cloud
 
   cloud_stack_slug = grafana_cloud_stack.oteldemo.slug
