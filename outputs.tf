@@ -7,7 +7,7 @@ output "prometheus_remote_endpoint" {
 }
 
 output "prometheus_user_id" {
-  value = grafana_cloud_stack.oteldemo.prometheus_remote_endpoint
+  value = grafana_cloud_stack.oteldemo.prometheus_user_id
 }
 
 output "loki_remote_endpoint" {
