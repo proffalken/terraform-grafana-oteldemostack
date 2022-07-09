@@ -37,3 +37,35 @@ spec:
         description: The geographical region you want to launch your stack into
         type: string
         default: eu
+    outputs:
+      prometheus_remote_write_endpoint:
+        description: The target to send metrics to in order to store them in the stack
+        type: URI/string
+      prometheus_remote_endpoint:
+        description: The URI to connect to in order to query the data stored in Prometheus on Grafana Cloud
+        type: URI/string
+      prometheus_user_id:
+        description: The user id (numeric) provided by Grafana Cloud for authentication to Prometheus
+        type: string
+      loki_remote_endpoint:
+        description: The target for logs in loki format
+        type: string
+      loki_user_id:
+        description: The user id (numeric) provided by Grafana Cloud for authentication to Loki
+        type: string
+      management_api_key:
+        description: The API Key to use for managing the stack
+        type: string
+      metrics_publisher_api_key:
+        description: The API key to publish metrics into Prometheus and Loki
+        type: string
+      metrics_viewer_api_key:
+        description: The API key to read metrics from Prometheus and Loki
+        type: string
+      plugin_publisher_api_key:
+        description: The API key to add plugins to the stack
+        type: string
+      admin_api_key:
+        description: An Administrative API Key for tasks within the stack as opposed to within the Cloud account
+        type: string
+
