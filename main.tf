@@ -22,6 +22,14 @@ resource "grafana_cloud_api_key" "metrics" {
   role           = "MetricsPublisher"
 }
 
+resource "grafana_cloud_api_key" "metrics_viewer" {
+  provider = grafana.cloud
+
+  cloud_org_slug = grafana_cloud_stack.oteldemo.org_slug
+  name           = "metrics-viewer"
+  role           = "Viewer"
+}
+
 resource "grafana_cloud_api_key" "plugins" {
   provider = grafana.cloud
 

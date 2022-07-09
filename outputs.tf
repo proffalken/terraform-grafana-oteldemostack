@@ -28,6 +28,11 @@ output "metrics_publisher_api_key" {
   sensitive = true
 }
 
+output "metrics_viewer_api_key" {
+  value     = grafana_cloud_api_key.metrics_viewer.key
+  sensitive = true
+}
+
 output "plugin_publisher_api_key" {
   value     = grafana_cloud_api_key.plugins.key
   sensitive = true
