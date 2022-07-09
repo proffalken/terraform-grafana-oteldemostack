@@ -37,3 +37,8 @@ output "plugin_publisher_api_key" {
   value     = grafana_cloud_api_key.plugins.key
   sensitive = true
 }
+
+output "admin_api_key" {
+  value     = grafana_cloud_api_key.admin.key
+  sensitive = true
+}
