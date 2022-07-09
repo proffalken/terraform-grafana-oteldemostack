@@ -14,3 +14,26 @@ spec:
   type: library
   owner: Proffalken
   lifecycle: development
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: terraform-grafana-oteldemostack
+  description: Terraform code to create a grafana cloud stack
+spec:
+  type: public
+  lifecycle: production
+  owner: matt@doics.co
+  definition: |
+    type: Terraform
+    inputs:
+      grafana_cloud_api_key:
+        description: The API Key to manage stacks within Grafana Cloud
+        type: string
+      grafana_stack_name:
+        description: The name you want to give to the stack managed by this module
+        type: string
+      grafana_region:
+        description: The geographical region you want to launch your stack into
+        type: string
+        default: eu
