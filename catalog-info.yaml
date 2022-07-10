@@ -9,7 +9,7 @@ metadata:
   description: |
     Terraform code to create a Grafana Cloud Stack and associated dashboards
   annotations:
-    github.com/project-slug: proffalken/terraform-grafana-oteldemostack
+    github.com/project-slug: proffalkens-demo-stack/terraform-grafana-oteldemostack
 spec:
   type: library
   owner: Proffalken
