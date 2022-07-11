@@ -45,3 +45,8 @@ resource "grafana_cloud_api_key" "admin" {
   name           = "admin"
   role           = "Admin"
 }
+
+resource "grafana_cloud_plugin_installation" "github" {
+  stack_slug = grafana_cloud_stack.oteldemo.org_slug
+  slug       = "grafana-github-datasource"
+}
