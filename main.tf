@@ -55,6 +55,8 @@ resource "grafana_cloud_plugin_installation" "github" {
 }
 
 resource "grafana_data_source" "github" {
+  provider = grafana.cloud
+
   type = "github"
   name = "github"
 
