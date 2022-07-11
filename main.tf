@@ -61,6 +61,6 @@ resource "grafana_data_source" "github" {
   name = "github"
 
   secure_json_data {
-    access_token = var.github_pat
+    accessToken = var.github_pat
   }
 }
