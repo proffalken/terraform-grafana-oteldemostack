@@ -47,6 +47,8 @@ resource "grafana_cloud_api_key" "admin" {
 }
 
 resource "grafana_cloud_plugin_installation" "github" {
+  provider = grafana.cloud
+
   stack_slug = grafana_cloud_stack.oteldemo.org_slug
   slug       = "grafana-github-datasource"
   version    = "1.0.15"
