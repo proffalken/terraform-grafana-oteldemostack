@@ -41,7 +41,7 @@ resource "grafana_cloud_api_key" "plugins" {
 resource "grafana_cloud_api_key" "admin" {
   provider = grafana.cloud
 
-  cloud_org_slug = grafana_cloud_stack.oteldemo.org_slug
+  cloud_org_slug = grafana_cloud_stack.oteldemo.stack_slug
   name           = "admin"
   role           = "Admin"
 }
