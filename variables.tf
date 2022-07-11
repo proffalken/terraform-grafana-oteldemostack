@@ -13,3 +13,9 @@ variable "grafana_region" {
   default = "eu"
   type    = string
 }
+
+variable "github_pat" {
+  default   = ""
+  type      = string
+  sensitive = true
+}

@@ -53,3 +53,12 @@ resource "grafana_cloud_plugin_installation" "github" {
   slug       = "grafana-github-datasource"
   version    = "1.0.15"
 }
+
+resource "grafana_data_source" "github" {
+  type = "github"
+  name = "github"
+
+  secure_json_data {
+    access_token = var.github_pat
+  }
+}
