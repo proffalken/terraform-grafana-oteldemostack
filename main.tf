@@ -57,10 +57,10 @@ resource "grafana_cloud_plugin_installation" "github" {
 resource "grafana_data_source" "github" {
   provider = grafana.cloud
 
-  type = "github"
+  type = "grafana-github-datasource"
   name = "github"
 
   secure_json_data {
-    accessToken = var.github_pat
+    access_token = var.github_pat
   }
 }
