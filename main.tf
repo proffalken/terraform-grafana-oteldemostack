@@ -41,7 +41,7 @@ resource "grafana_cloud_api_key" "plugins" {
 resource "grafana_cloud_api_key" "admin" {
   provider = grafana.cloud
 
-  cloud_org_slug = grafana_cloud_stack.oteldemo.stack_slug
+  cloud_org_slug = grafana_cloud_stack.oteldemo.org_slug
   name           = "admin"
   role           = "Admin"
 }
@@ -49,7 +49,7 @@ resource "grafana_cloud_api_key" "admin" {
 resource "grafana_cloud_plugin_installation" "github" {
   provider = grafana.cloud
 
-  stack_slug = grafana_cloud_stack.oteldemo.org_slug
+  stack_slug = grafana_cloud_stack.oteldemo.slug
   slug       = "grafana-github-datasource"
   version    = "1.0.15"
 }
